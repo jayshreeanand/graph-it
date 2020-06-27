@@ -9,6 +9,7 @@ require("@rails/activestorage").start()
 require("channels")
 require("jquery")
 require("bootstrap-sprockets")
+require("dropzone")
 
 import 'controllers'
 
