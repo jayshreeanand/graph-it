@@ -15,6 +15,7 @@ gem 'webpacker', '~> 4.0'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.7'
 gem 'bootstrap-sass', '~> 3.4.1'
+gem 'jquery-rails'
 
 # Auth
 gem 'devise'
