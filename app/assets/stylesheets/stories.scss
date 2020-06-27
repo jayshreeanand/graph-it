@@ -15,9 +15,10 @@ body {
 
   .thumbnail {
     background-color: #FEFEFE;
-    height: 450px;
-    display: block;
-    min-height: 450px;
+    // height: 450px;
+    // display: block;
+    // min-height: 450px;
+    padding: 20px;
   }
 }
 
@@ -32,15 +33,9 @@ a:hover {
   margin-bottom: 5px;
 }
 
-.markers {
-  color: #CCC;
-  margin-right: 5px;
-  font-size: 15px;
-}
-
 .story-description {
   display: block;
-  height: 50px;
+  height: 30px;
   margin-bottom: 5px;
 }
 

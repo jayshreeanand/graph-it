@@ -1,10 +1,4 @@
-<p id="notice"><%= notice %></p>
 
-<h1>Stories</h1>
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#uploadStoryModal">
-  Launch demo modal
-</button>
 
 <!-- Modal -->
 <div class="modal fade" id="uploadStoryModal" tabindex="-1" role="dialog" aria-labelledby="uploadStoryModalLabel" aria-hidden="true">
@@ -27,27 +21,14 @@
   </div>
 </div>
 
-<!-- <table>
-  <thead>
-    <tr>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @stories.each do |story| %>
-      <tr>
-        <td><%= link_to 'Show', story %></td>
-        <td><%= link_to 'Edit', edit_story_path(story) %></td>
-        <td><%= link_to 'Destroy', story, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br> -->
 
 <div class="container">
+
+  <h1>Stories</h1>
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#uploadStoryModal">
+    New Story
+  </button>
   <div id="stories">
     <%- @stories.in_groups_of(3, false).each do |stories| %>
       <div class="row">
@@ -56,5 +37,3 @@
     <%- end %>
   </div>
 </div>
-
-<%= link_to 'New Story', new_story_path %>
