@@ -93,6 +93,8 @@ GEM
       railties (>= 4.1.0)
       responders
       warden (~> 1.2.3)
+    dropzonejs-rails (0.8.4)
+      rails (> 3.1)
     erubi (1.9.0)
     excon (0.75.0)
     execjs (2.7.0)
@@ -274,6 +276,7 @@ DEPENDENCIES
   capybara (>= 2.15)
   carrierwave
   devise
+  dropzonejs-rails
   feathericon-rails
   fog-aws
   foreman

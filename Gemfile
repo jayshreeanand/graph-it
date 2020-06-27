@@ -24,6 +24,7 @@ gem 'devise'
 # Uploads
 gem 'carrierwave'
 gem 'fog-aws'
+gem 'dropzonejs-rails'
 
 # Image manipulation
 gem 'mini_magick'
