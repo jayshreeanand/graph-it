@@ -1,38 +1,41 @@
-<%= form_with(model: story, local: true, multipart: true) do |form| %>
-  <% if story.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(story.errors.count, "error") %> prohibited this story from being saved:</h2>
+<div class="form-signin">
+  <h1 class="form-signin-header">New Story</h1>
+  <%= form_with(model: story, local: true, multipart: true) do |form| %>
+    <% if story.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(story.errors.count, "error") %> prohibited this story from being saved:</h2>
 
-      <ul>
-        <% story.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
+        <ul>
+          <% story.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="mb-6">
+      <%= form.label :title %>
+      <%= form.text_field :title, class: "form-control" %>
     </div>
-  <% end %>
 
-  <div class="mb-6">
-    <%= form.label :title, class: "label" %>
-    <%= form.text_field :title, class: "input" %>
-  </div>
+    <div class="mb-6">
+      <%= form.label :description %>
+      <%= form.text_area :description, class: "form-control" %>
+    </div>
 
-  <div class="mb-6">
-    <%= form.label :description, class: "label" %>
-    <%= form.text_area :description, class: "input" %>
-  </div>
-
-  <div class="mb-6">
-    <%= form.label :picture, class: "label" %>
-    <div class="dropzone dropzone-default dz-clickable" data-controller="dropzone" data-dropzone-max-file-size="2" data-dropzone-max-files="1">
-    <%= form.file_field :picture, direct_upload: true, data: { target: 'dropzone.input' } %>
-    <div class="dropzone-msg dz-message needsclick text-gray-600">
-      <h3 class="dropzone-msg-title">Drag here to upload or click here to browse</h3>
-      <span class="dropzone-msg-desc text-sm">2 MB file size maximum. Allowed file types png, jpg, gif.</span>
+    <div class="mb-6">
+      <%= form.label :picture %>
+      <div class="dropzone dropzone-default dz-clickable" data-controller="dropzone" data-dropzone-max-file-size="2" data-dropzone-max-files="1">
+      <%= form.file_field :picture, direct_upload: true, data: { target: 'dropzone.input' } %>
+      <div class="dropzone-msg dz-message needsclick text-gray-600">
+        <h3 class="dropzone-msg-title">Drag here to upload or click here to browse</h3>
+        <span class="dropzone-msg-desc text-sm">2 MB file size maximum. Allowed file types png, jpg, gif.</span>
+        </div>
       </div>
     </div>
-  </div>
 
-  <div class="mb-6">
-    <%= form.submit  class: "btn-default btn" %>
-  </div>
-<% end %>
+    <div class="mb-6">
+      <%= form.submit  class: "btn-default btn btn-lg btn-block" %>
+    </div>
+  <% end %>
+</div>
