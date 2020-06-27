@@ -7,6 +7,9 @@ ruby '2.5.1'
 gem 'rails', '~> 6.0.0'
 gem 'pg'
 gem 'puma', '~> 3.11'
+gem 'foreman'
+
+# Views
 gem 'sass-rails', '~> 5'
 gem 'webpacker', '~> 4.0'
 gem 'turbolinks', '~> 5'
