@@ -32,6 +32,12 @@
             <%= form.label :description %>
             <%= form.text_area :description, class: "form-control" %>
           </div>
+          <div class="mb-6 maps-autocomplete">
+            <input id="searchTextField" type="text" size="50">
+          </div>
+
+          <%= hidden_field_tag :latitude  %>
+          <%= hidden_field_tag :longitude %>
 
           <div class="mb-6">
             <%= form.label :picture %>
@@ -49,3 +55,28 @@
     </div>
   </div>
 </div>
+
+<script>
+  function initialize() {
+    var input = document.getElementById('searchTextField');
+    var autocomplete = new google.maps.places.Autocomplete(input);
+  
+    autocomplete.addListener('place_changed', function() {
+
+      var place = autocomplete.getPlace();
+
+      if (!place.geometry) {
+        // User entered the name of a Place that was not suggested and
+        // pressed the Enter key, or the Place Details request failed.
+        console.log('User entered: ' + place.name);
+        return;
+      }
+
+      console.log('You selected: ' + place.geometry.location.lat());
+      document.getElementById('latitude').value = place.geometry.location.lat();
+      document.getElementById('longitude').value = place.geometry.location.lng();
+    });
+  }
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDW-c5qqjHvpbknE3Tj-u_T7MOurIv8_eE&libraries=places&callback=initialize"></script>
