@@ -4,18 +4,26 @@
   <%= devise_error_messages! %>
 
   <div class="field">
+    <%= f.label :avatar %><br>
+    <%= f.file_field :avatar %>
+    <% if f.object.avatar? %>
+      <%= image_tag f.object.avatar.thumb.url %>
+    <% end %>
+  </div>
+
+  <div class="field">
     <%= f.label :first_name %><br />
     <%= f.text_field :first_name, autofocus: true, class: "form-control"%>
   </div>
 
   <div class="field">
     <%= f.label :last_name %><br />
-    <%= f.text_field :last_name, autofocus: true, class: "form-control"%>
+    <%= f.text_field :last_name, class: "form-control"%>
   </div>
 
   <div class="field">
     <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, class: "form-control" %>
+    <%= f.email_field :email, class: "form-control" %>
   </div>
 
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>

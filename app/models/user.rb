@@ -11,4 +11,10 @@ class User < ApplicationRecord
   validates :last_name, presence: true
 
   mount_uploader :avatar, AvatarUploader
+
+
+  def remove_image
+    avatar = nil
+    save!
+  end
 end
