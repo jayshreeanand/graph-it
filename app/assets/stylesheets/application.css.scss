@@ -12,9 +12,9 @@
  * file per style scope.
  *
  */
-@import 'bootstrap-sprockets';
-@import 'bootstrap';
+@import 'bootstrap/scss/bootstrap';
 @import 'feathericon';
 @import 'home';
 @import 'stories';
-@import 'dropzone/dropzone'
+@import 'dropzone/dropzone';
+
