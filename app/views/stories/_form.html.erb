@@ -25,6 +25,11 @@
 
     <div class="mb-6">
       <%= form.label :picture %>
+      <%= form.file_field :picture, class: "form-control" %>
+    </div>
+    <br />
+<!--     <div class="mb-6">
+      <%= form.label :picture %>
       <div class="dropzone dropzone-default dz-clickable" data-controller="dropzone" data-dropzone-max-file-size="2" data-dropzone-max-files="1">
       <%= form.file_field :picture, direct_upload: true, data: { target: 'dropzone.input' } %>
       <div class="dropzone-msg dz-message needsclick text-gray-600">
@@ -32,7 +37,7 @@
         <span class="dropzone-msg-desc text-sm">2 MB file size maximum. Allowed file types png, jpg, gif.</span>
         </div>
       </div>
-    </div>
+    </div> -->
 
     <div class="mb-6">
       <%= form.submit  class: "btn-default btn btn-lg btn-block" %>
