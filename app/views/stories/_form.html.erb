@@ -32,13 +32,16 @@
             <%= form.label :description %>
             <%= form.text_area :description, class: "form-control" %>
           </div>
+
+          <br />
+
           <div class="mb-6 maps-autocomplete">
-            <input id="searchTextField" type="text" size="50">
+            <input id="searchTextField" type="text" size="50" class="form-control">
           </div>
 
-          <%= hidden_field_tag :location %>
-          <%= hidden_field_tag :latitude  %>
-          <%= hidden_field_tag :longitude %>
+          <%= form.hidden_field :location %>
+          <%= form.hidden_field :latitude  %>
+          <%= form.hidden_field :longitude %>
 
           <div class="mb-6">
             <%= form.label :picture %>
@@ -74,9 +77,9 @@
       }
 
       console.log('You selected: ' + place.geometry.location.lat());
-      document.getElementById('latitude').value = place.geometry.location.lat();
-      document.getElementById('longitude').value = place.geometry.location.lng();
-      document.getElementById('location').value = place.formatted_address;
+      document.getElementById('story_latitude').value = place.geometry.location.lat();
+      document.getElementById('story_longitude').value = place.geometry.location.lng();
+      document.getElementById('story_location').value = place.formatted_address;
 
     });
   }
