@@ -1,3 +1,84 @@
 // Place all the styles related to the Stories controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+// Place all the styles related to the Stories controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+    padding-top: 70px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+}
+
+
+.navbar-nav > li > strong{
+  padding-top: 15px;
+  padding-bottom: 15px;
+  position: relative;
+  display: block;
+}
+
+.story-box {
+  margin-bottom: 30px;
+
+  .thumbnail {
+    background-color: #FEFEFE;
+    height: 450px;
+    display: block;
+    min-height: 450px;
+  }
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.past-story {
+  color: #f78066;
+  font-size: 13px;
+}
+
+footer {
+  margin: 50px 0;
+}
+
+.story-title {
+  display: block;
+  height: 50px;
+  margin-bottom: 5px;
+}
+
+.markers {
+  color: #CCC;
+  margin-right: 5px;
+  font-size: 15px;
+}
+
+.story-description {
+  display: block;
+  height: 50px;
+  margin-bottom: 5px;
+}
+
+
+.navbar-default {
+  background-color: #38ccb9;
+  border: none;
+  color: #000;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: white;
+}
+
+.navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
+  color: white;
+}
+
+.discount-tip {
+  color: #3366FF;
+}
+.old-price {
+  color: #FF6666;
+  font-size: 12px;
+}
