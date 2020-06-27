@@ -22,6 +22,9 @@ gem 'devise'
 gem 'carrierwave'
 gem 'fog-aws'
 
+# Image manipulation
+gem 'mini_magick'
+
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
