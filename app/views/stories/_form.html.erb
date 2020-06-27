@@ -8,7 +8,7 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <div class="form-signin">
+      <div class="form-story">
         <%= form_with(model: story, local: true, multipart: true) do |form| %>
         <div class="modal-body">
           <% if story.errors.any? %>
@@ -28,20 +28,20 @@
             <%= form.text_field :title, class: "form-control" %>
           </div>
 
-          <div class="mb-6">
+          <div class="mb-3">
             <%= form.label :description %>
             <%= form.text_area :description, class: "form-control" %>
           </div>
 
-          <br />
-
-          <div class="mb-6 maps-autocomplete">
+          <div class="mb-3 py-1 maps-autocomplete">
+            <%= form.label :location %>
             <input id="searchTextField" type="text" size="50" class="form-control">
           </div>
 
           <%= form.hidden_field :location %>
           <%= form.hidden_field :latitude  %>
           <%= form.hidden_field :longitude %>
+
 
           <div class="mb-6">
             <%= form.label :picture %>
