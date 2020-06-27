@@ -5,6 +5,9 @@ class CreateStories < ActiveRecord::Migration[6.0]
       t.string :title
       t.text :description
       t.string :picture
+      t.string :location
+      t.string :latitude
+      t.string :longitude
 
       t.timestamps
     end
