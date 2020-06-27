@@ -1,7 +1,25 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.bg-purple {
+  background-color: #7915B8;
+  color: #fff;
+}
 
+.btn-outline-purple {
+  color: #7915B8;
+  border-color: #7915B8;
+  border: 2px solid;
+}
+
+.btn-outline-purple:hover {
+  color: #fff;
+  background-color: #7915B8;
+}
+
+.avatar-tiny img {
+  width:50px;
+}
 .form-signin {
   max-width: 330px;
   padding: 15px;

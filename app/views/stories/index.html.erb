@@ -1,9 +1,8 @@
 <%= render 'form', story: @story %>
 
 <div class="container">
-  <h1>Stories</h1>
-  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#uploadStoryModal">
-    New Story
+  <button type="button" class="btn btn-lg btn-outline-purple mt-5 mb-4" data-toggle="modal" data-target="#uploadStoryModal">
+    Create Story
   </button>
   <div id="stories">
     <%- @stories.in_groups_of(3, false).each do |stories| %>
