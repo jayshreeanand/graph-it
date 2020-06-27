@@ -36,6 +36,7 @@
             <input id="searchTextField" type="text" size="50">
           </div>
 
+          <%= hidden_field_tag :location %>
           <%= hidden_field_tag :latitude  %>
           <%= hidden_field_tag :longitude %>
 
@@ -75,6 +76,8 @@
       console.log('You selected: ' + place.geometry.location.lat());
       document.getElementById('latitude').value = place.geometry.location.lat();
       document.getElementById('longitude').value = place.geometry.location.lng();
+      document.getElementById('location').value = place.formatted_address;
+
     });
   }
 </script>
