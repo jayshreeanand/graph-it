@@ -12,17 +12,22 @@ body {
 
 .story-box {
   margin-bottom: 30px;
+  text-decoration: none;
 
   .thumbnail {
     background-color: #FEFEFE;
-    // height: 450px;
-    // display: block;
-    // min-height: 450px;
+    display: block;
     padding: 20px;
+  }
+
+  .picture {
+    min-height: 600px;
+    min-width: 300px;
   }
 }
 
-a:hover {
+a, a:hover {
+  color: black;
   text-decoration: none;
 }
 
