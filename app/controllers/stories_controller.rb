@@ -4,6 +4,7 @@ class StoriesController < ApplicationController
 
   def index
     @stories = Story.all
+    @story = Story.new
   end
 
   def show

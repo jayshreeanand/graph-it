@@ -7,9 +7,10 @@ require("@rails/ujs").start()
 require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
-require("dropzone")
+// require("dropzone")
 
 import 'bootstrap'
+import 'dropzone'
 import 'controllers'
 
 // Uncomment to copy all static images under ../images to the output folder and reference
