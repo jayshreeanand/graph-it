@@ -96,6 +96,8 @@ GEM
     erubi (1.9.0)
     excon (0.75.0)
     execjs (2.7.0)
+    feathericon-rails (1.0.0)
+      rails (>= 4.0.0)
     ffi (1.13.1)
     fog-aws (3.6.6)
       fog-core (~> 2.1)
@@ -272,6 +274,7 @@ DEPENDENCIES
   capybara (>= 2.15)
   carrierwave
   devise
+  feathericon-rails
   fog-aws
   foreman
   jbuilder (~> 2.7)
