@@ -5,5 +5,4 @@ class Story < ApplicationRecord
   validates :description, presence: true
 
   mount_uploader :picture, PictureUploader
-
 end
