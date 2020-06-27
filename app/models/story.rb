@@ -3,4 +3,7 @@ class Story < ApplicationRecord
 
   validates :title, presence: true
   validates :description, presence: true
+
+  mount_uploader :picture, PictureUploader
+
 end
