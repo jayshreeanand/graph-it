@@ -95,8 +95,8 @@ GEM
       rails (> 3.1)
     erubi (1.9.0)
     excon (0.75.0)
-    feathericon-rails (1.0.0)
-      rails (>= 4.0.0)
+    feathericon-sass (1.0.0)
+      sass (>= 3.2)
     ffi (1.13.1)
     fog-aws (3.6.6)
       fog-core (~> 2.1)
@@ -270,7 +270,7 @@ DEPENDENCIES
   carrierwave-video
   devise
   dropzonejs-rails
-  feathericon-rails
+  feathericon-sass
   fog-aws
   foreman
   jbuilder (~> 2.7)
