@@ -26,25 +26,26 @@
           </li>
         </ul>
 
-        <ul class="navbar-nav pull-right">
-          <% if user_signed_in? %>
-          <%= link_to edit_user_registration_path, action: 'go' do %>
-            <!-- <li class="avatar-tiny"><%= image_tag current_user.avatar.thumb.url, class: "rounded-circle" %>
-            </li> -->
+        <% if user_signed_in? %>
+          <ul class="navbar-nav pull-right">
             <li class="nav-item">
-              <div class="nav-link avatar-tiny">
-                <%= image_tag current_user.avatar.thumb.url, class: "rounded-circle" %>
-                <%= current_user.first_name %>
-              </div>
+              <%= link_to edit_user_registration_path, action: 'go', class: 'nav-link' do %>
+                <div class="avatar-tiny">
+                  <%= image_tag current_user.avatar.thumb.url, class: "rounded-circle" %>
+                  <%= current_user.first_name %>
+                </div>
+              <% end %>
             </li>
-          <% end %>
-       
-          <li class="nav-item"><%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'nav-link'  %></li>
-          <% else %>
-          <li class="nav-item"><%= link_to "Register", new_user_registration_path, :class => 'nav-link'  %></li>
-          <li class="nav=item"><%= link_to "Login", new_user_session_path, :class => 'nav-link'  %></li>
-          <% end %>
-        </ul>
+          </ul>
+          <ul class="navbar-nav pull-right">
+            <li class="nav-item"><%= button_to "Logout", destroy_user_session_path, method: :delete, :class => 'nav-link btn btn-outline'  %></li>
+          </ul>
+        <% else %>
+          <ul class="navbar-nav pull-right">
+            <li class="nav-item"><%= link_to "Register", new_user_registration_path, :class => 'nav-link'  %></li>
+            <li class="nav=item"><%= link_to "Login", new_user_session_path, :class => 'nav-link'  %></li>
+          </ul>
+        <% end %>
       </div>
     </nav>
 
