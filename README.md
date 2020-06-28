@@ -5,13 +5,21 @@ Email: ​demo@demo.com
 Password: demo
 
 Stack - Ruby on Rails, Javascript
+
 Database - Postgres
+
 Background Jobs - Resque
+
 Memory store - Redis
+
 Storage - AWS S3 
+
 Server - Heroku (Ruby + ffmpeg builpacks)
+
 Mailer - SendGrid
+
 Dropzone for file drag and drop
+
 3rd party APIs used
 - Google maps Javascript API for location autocomplete and for fetching latitude, longitude
 coordinates
@@ -30,3 +38,5 @@ for account confirmation)
 [https://graph-it-live.herokuapp.com/resque_web](https://graph-it-live.herokuapp.com/resque_web)
 
 ------
+
+
