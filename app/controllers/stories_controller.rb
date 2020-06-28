@@ -11,7 +11,7 @@ class StoriesController < ApplicationController
   end
 
   def explore
-    @stories = Story.all
+    @stories = Story.where.not(user: current_user)
   end
 
   def new
