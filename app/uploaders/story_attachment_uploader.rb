@@ -2,6 +2,7 @@
 class StoryAttachmentUploader < BaseUploader
   include CarrierWave::MiniMagick
   include CarrierWave::Video
+  include CarrierWave::Backgrounder::Delay
 
   def extension_whitelist
     %w(jpg jpeg gif png mp4)

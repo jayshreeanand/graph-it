@@ -10,7 +10,7 @@ class Story < ApplicationRecord
   before_save :update_kind
 
   mount_uploader :attachment, StoryAttachmentUploader
-
+  process_in_background :attachment
 
   def short_location
     location.split(",")[0] || ''
