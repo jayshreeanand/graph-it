@@ -8,7 +8,14 @@
           <%- elsif story.kind == 'image' %>
             <img class="picture" src="<%= story.attachment.url %>" alt="">
           <% end %>
-          <div class="location-home location pt-2 pb-3"><%= story.short_location %></div>
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="location-home location pt-2 pb-3"><%= story.short_location %></div>
+            </div>
+            <div class="col-sm-5">
+              <div class="time pt-2 pb-3 float-right"><%= time_ago_in_words(story.created_at) + ' ' + 'ago' %></div>
+            </div>
+          </div>
           <div class="caption">
             <h3 class="story-title"><%= story.title %></h3>
             <p class="story-description"><%= story.description.truncate(75) %></p>
