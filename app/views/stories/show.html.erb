@@ -1,7 +1,6 @@
 <div class="col-md-3 col-sm-6 story-box">
   <div class="story">
     <div class="thumbnail">
-      <%= console %>
       <%- if @story.kind == 'video' %>
         <%= video_tag @story.attachment.url, controls: true, class: 'video' %>
       <%- elsif @story.kind == 'image' %>

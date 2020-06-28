@@ -3,11 +3,15 @@ class StoriesController < ApplicationController
   before_action :set_story, only: [:show, :edit, :update, :destroy]
 
   def index
-    @stories = Story.all
+    @stories = current_user.stories.all
     @story = Story.new
   end
 
   def show
+  end
+
+  def explore
+    @stories = Story.all
   end
 
   def new

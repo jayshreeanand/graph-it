@@ -19,10 +19,10 @@
       <div class="collapse navbar-collapse" id="navbarsExample06">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="/stories">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="/stories">My Stories <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Explore</a>
+            <a class="nav-link" href="/explore">Explore</a>
           </li>
         </ul>
 
@@ -31,8 +31,8 @@
             <li class="nav-item">
               <%= link_to edit_user_registration_path, action: 'go', class: 'nav-link' do %>
                 <div class="avatar-tiny">
-                  <%= image_tag current_user.avatar.thumb.url, class: "rounded-circle" %>
-                  <%= current_user.first_name %>
+                  <%= image_tag current_user.image, class: "rounded-circle" %>
+                  <%= current_user.first_name.capitalize %>
                 </div>
               <% end %>
             </li>
