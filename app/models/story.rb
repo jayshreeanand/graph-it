@@ -4,5 +4,8 @@ class Story < ApplicationRecord
   validates :title, presence: true
   validates :description, presence: true
 
-  mount_uploader :picture, StoryAttachmentUploader
+  enum kind: { image: 0, video: 1 }
+
+
+  mount_uploader :attachment, StoryAttachmentUploader
 end

@@ -19,10 +19,11 @@ ActiveRecord::Schema.define(version: 2020_06_27_062018) do
     t.bigint "user_id"
     t.string "title"
     t.text "description"
-    t.string "picture"
+    t.string "attachment"
     t.string "location"
     t.string "latitude"
     t.string "longitude"
+    t.integer "kind", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_stories_on_user_id"

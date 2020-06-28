@@ -4,10 +4,11 @@ class CreateStories < ActiveRecord::Migration[6.0]
       t.belongs_to :user, index: true
       t.string :title
       t.text :description
-      t.string :picture
+      t.string :attachment
       t.string :location
       t.string :latitude
       t.string :longitude
+      t.integer :kind, null: false
 
       t.timestamps
     end
