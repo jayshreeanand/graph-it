@@ -11,9 +11,8 @@
   text-decoration: none;
 
   .thumbnail {
-    background-color: #FEFEFE;
     display: block;
-    padding: 20px;
+    padding-top: 20px;
   }
 
   .picture {
@@ -27,9 +26,18 @@ a, a:hover {
   text-decoration: none;
 }
 
+.story-section a, .story-section a:hover {
+  color: #000;
+}
+
+.story-section {
+  padding: 20px;
+}
+
 .story-title {
   display: block;
   height: 50px;
+  padding-top: 10px;
   margin-bottom: 5px;
 }
 
@@ -39,17 +47,9 @@ a, a:hover {
   margin-bottom: 5px;
 }
 
-.picture {
-  max-width: 300px;
-}
-
 // Maps autocomplete
 .pac-container {
   z-index: 9999;
-}
-
-.video {
-  width: 300px;
 }
 
 .form-story {
@@ -61,3 +61,17 @@ a, a:hover {
 .dropzone {
   border: 2px dashed rgba(0, 0, 0, 0.3) !important;
 }
+
+.picture, .video {
+  border-radius: 20px;
+  height: 600px;
+  width: 300px;
+  background-color: #D8D8D8;
+}
+
+.location {
+  font-size: 15px;
+  color: #7915B8;
+  height: 15px;
+}
+

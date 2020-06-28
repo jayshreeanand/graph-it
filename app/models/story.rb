@@ -11,6 +11,11 @@ class Story < ApplicationRecord
 
   mount_uploader :attachment, StoryAttachmentUploader
 
+
+  def short_location
+    location.split(",")[0] || ''
+  end
+
   private
 
   def update_kind

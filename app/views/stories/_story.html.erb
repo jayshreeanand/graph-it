@@ -1,4 +1,4 @@
-<div class="col-m-4">
+<div class="col-md-4 story-section">
   <%= link_to story, action: 'go' do %>
     <div class="story-box">
       <div class="story">
@@ -8,10 +8,10 @@
           <%- elsif story.kind == 'image' %>
             <img class="picture" src="<%= story.attachment.url %>" alt="">
           <% end %>
+          <div class="location-home location pt-2 pb-3"><%= story.short_location %></div>
           <div class="caption">
             <h3 class="story-title"><%= story.title %></h3>
-            <p class="story-description"><%= story.description %></p>
-            <p><i class="fe fe-map-pin"></i><%= story.location %>
+            <p class="story-description"><%= story.description.truncate(75) %></p>
           </div>
         </div>
       </div>
