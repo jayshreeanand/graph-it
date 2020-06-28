@@ -11,7 +11,7 @@ class StoriesController < ApplicationController
   end
 
   def explore
-    @stories = Story.where.not(user: current_user)
+    @stories = Story.where.not(user: current_user).order(created_at: :asc)
   end
 
   def new
