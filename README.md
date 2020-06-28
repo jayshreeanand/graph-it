@@ -31,11 +31,11 @@ Screenshots here : https://docs.google.com/document/d/1muk4VsvnzgIsao4TR09QWoLhD
 - You can also sign up for a new account. (You should verify your email through a confirmation link
 for account confirmation)
 - User authentication - Sign in , sign up, Email verification , Edit profile, Cancel account. Randomly generated user avatars using TinyGraphs
--  Images and videos are initially uploaded to S3. Later background works process and resize the images and videos. Images to 1200 x 600 , 600 x 300 (for thumbnails). Videos to 480x and 240px. Original uploads are also preserved.
+-  Images and videos are initially uploaded to S3. Later background workers process and resize the images and videos. Images to 1200 x 600 , 600 x 300 (for thumbnails). Videos to 480x and 240px. Original uploads are also preserved.
 -  ‘My stories’ section displays users' own stories. ‘Explore’ section displays stories by other users
 -  Each story has the following field - Title, description, location (along with latitude, longitude), type(image/video), attachment, timestamps
 - Stories can be created, updated, deleted.
--  Redis + resque for background image processing .Resque dashboard can be accessed here -
+-  Redis + resque for background image and video processing .Resque dashboard can be accessed here -
 [https://graph-it-live.herokuapp.com/resque_web](https://graph-it-live.herokuapp.com/resque_web)
 
 ------
