@@ -21,6 +21,7 @@ gem 'devise'
 
 # Uploads
 gem 'carrierwave'
+gem 'carrierwave-video'
 gem 'fog-aws'
 gem 'dropzonejs-rails'
 
