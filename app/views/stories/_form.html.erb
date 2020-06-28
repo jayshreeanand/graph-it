@@ -25,17 +25,17 @@
 
           <div class="mb-6">
             <%= form.label :title %>
-            <%= form.text_field :title, class: "form-control" %>
+            <%= form.text_field :title, class: "form-control", required: true %>
           </div>
 
           <div class="mb-3">
             <%= form.label :description %>
-            <%= form.text_area :description, class: "form-control" %>
+            <%= form.text_area :description, class: "form-control", required: true %>
           </div>
 
           <div class="mb-3 py-1 maps-autocomplete">
             <%= form.label :location %>
-            <input id="searchTextField" type="text" size="50" class="form-control">
+            <input id="searchTextField" type="text" size="50" class="form-control" required="true">
           </div>
 
           <%= form.hidden_field :location %>
@@ -45,7 +45,7 @@
 
           <div class="mb-6">
             <%= form.label 'Drag drop Image or Video' %>
-            <%= form.file_field :attachment, class: "form-control dropzone" %>
+            <%= form.file_field :attachment, class: "form-control dropzone", required: true %>
           </div>
           <br />
         </div>
