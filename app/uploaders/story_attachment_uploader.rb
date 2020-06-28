@@ -8,10 +8,6 @@ class StoryAttachmentUploader < BaseUploader
     %w(jpg jpeg gif png mp4)
   end
 
-  # version :small do
-  #   process :resize_to_fit => [300, 600]
-  # end
-
   version :video, if: :video? do
     process encode_video: [:mp4, resolution: '854x480']
   end

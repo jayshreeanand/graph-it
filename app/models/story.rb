@@ -16,6 +16,18 @@ class Story < ApplicationRecord
     location.split(",")[0] || ''
   end
 
+  def resized_attachment
+    if attachment_url.present?
+      if image?
+        attachment.image_small.file.exists? ? attachment.image_small.url : attachment.image.url
+      elsif video?
+        attachment.video_small.file.exists? ? attachment.video_small.url : attachment.video.url
+      else
+        ''
+      end
+    end
+  end
+
   private
 
   def update_kind

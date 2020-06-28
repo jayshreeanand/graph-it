@@ -4,9 +4,9 @@
       <div class="story">
         <div class="thumbnail">
           <%- if story.kind == 'video' %>
-            <%= video_tag story.attachment.url, controls: true, class: 'video' %>
+            <%= video_tag story.resized_attachment, controls: true, class: 'video' %>
           <%- elsif story.kind == 'image' %>
-            <img class="picture" src="<%= story.attachment.url %>" alt="">
+            <img class="picture" src="<%= story.resized_attachment %>" alt="">
           <% end %>
           <div class="row">
             <div class="col-sm-6">
