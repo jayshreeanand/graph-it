@@ -9,7 +9,7 @@
   </div>
 
 
-  <div class="col-md-3 col-sm-6 story-box">
+  <div class="col-md-6 col-sm-6 story-box">
     <div class="story">
       <div class="thumbnail">
         <%- if @story.kind == 'video' %>
@@ -21,6 +21,8 @@
           <h3 class="story-title"><%= @story.title %></h3>
           <p class="story-description"><%= @story.description %></p>
           <p><i class="fe fe-map-pin"></i><%= @story.location %>
+          <p class="attachment">Original Asset Link: <a href="<%= @story.attachment.url %>" target="_blank"><%= @story.attachment.url %></a></p>
+          <p class="attachment">Resized Asset Link: <a href="<%= @story.attachment.url %>" target="_blank"><%= @story.resized_attachment %></a></p>
         </div>
       </div>
     </div>

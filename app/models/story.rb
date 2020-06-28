@@ -17,15 +17,14 @@ class Story < ApplicationRecord
   end
 
   def resized_attachment
-    if attachment_url.present?
+    result = if attachment_url.present?
       if image?
-        attachment.image_small.file.exists? ? attachment.image_small.url : attachment.image.url
+        attachment.image_small.file.try(:exists?) ? attachment.image_small.url : attachment.image.url
       elsif video?
-        attachment.video_small.file.exists? ? attachment.video_small.url : attachment.video.url
-      else
-        ''
+        attachment.video_small.file.try(:exists?) ? attachment.video_small.url : attachment.video.url
       end
     end
+    result || ''
   end
 
   private

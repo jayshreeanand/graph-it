@@ -9,11 +9,11 @@ class StoryAttachmentUploader < BaseUploader
   end
 
   version :video, if: :video? do
-    process encode_video: [:mp4, resolution: '854x480']
+    process encode_video: [:mp4, resolution: '480']
   end
 
   version :video_small, if: :video? do
-    process encode_video: [:mp4, resolution: '427x240']
+    process encode_video: [:mp4, resolution: '240']
   end
 
   version :image, if: :image? do
