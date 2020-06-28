@@ -22,7 +22,7 @@ gem 'devise'
 # Uploads
 gem 'carrierwave_direct'
 gem 'carrierwave-video'
-gem 'carrierwave_backgrounder'
+gem 'carrierwave_backgrounder', github: 'jayshreeanand/carrierwave_backgrounder'
 gem 'fog-aws'
 gem 'dropzonejs-rails'
 
