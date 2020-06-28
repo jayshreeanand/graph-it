@@ -82,6 +82,9 @@ GEM
     carrierwave-video (0.6.0)
       carrierwave
       streamio-ffmpeg
+    carrierwave_direct (2.1.0)
+      carrierwave (>= 1.0.0)
+      fog-aws
     childprocess (3.0.0)
     concurrent-ruby (1.1.6)
     crass (1.0.6)
@@ -266,8 +269,8 @@ DEPENDENCIES
   bootsnap (>= 1.4.2)
   byebug
   capybara (>= 2.15)
-  carrierwave
   carrierwave-video
+  carrierwave_direct
   devise
   dropzonejs-rails
   feathericon-sass

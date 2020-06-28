@@ -20,7 +20,7 @@ gem 'feathericon-sass'
 gem 'devise'
 
 # Uploads
-gem 'carrierwave'
+gem 'carrierwave_direct'
 gem 'carrierwave-video'
 gem 'fog-aws'
 gem 'dropzonejs-rails'
