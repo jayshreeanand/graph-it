@@ -82,6 +82,7 @@ GEM
     carrierwave-video (0.6.0)
       carrierwave
       streamio-ffmpeg
+    carrierwave_backgrounder (0.0.2)
     carrierwave_direct (2.1.0)
       carrierwave (>= 1.0.0)
       fog-aws
@@ -270,6 +271,7 @@ DEPENDENCIES
   byebug
   capybara (>= 2.15)
   carrierwave-video
+  carrierwave_backgrounder
   carrierwave_direct
   devise
   dropzonejs-rails
