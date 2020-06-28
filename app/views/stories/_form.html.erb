@@ -60,29 +60,4 @@
   </div>
 </div>
 
-<script>
-  function initialize() {
-    var input = document.getElementById('searchTextField');
-    var autocomplete = new google.maps.places.Autocomplete(input);
-  
-    autocomplete.addListener('place_changed', function() {
-
-      var place = autocomplete.getPlace();
-
-      if (!place.geometry) {
-        // User entered the name of a Place that was not suggested and
-        // pressed the Enter key, or the Place Details request failed.
-        console.log('User entered: ' + place.name);
-        return;
-      }
-
-      console.log('You selected: ' + place.geometry.location.lat());
-      document.getElementById('story_latitude').value = place.geometry.location.lat();
-      document.getElementById('story_longitude').value = place.geometry.location.lng();
-      document.getElementById('story_location').value = place.formatted_address;
-
-    });
-  }
-</script>
-
-<script src="https://maps.googleapis.com/maps/api/js?key=<%= Rails.application.secrets.google_maps_api_key %>&libraries=places&callback=initialize"></script>
+<%= render 'maps_autocomplete' %>

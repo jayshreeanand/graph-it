@@ -19,6 +19,8 @@ class StoriesController < ApplicationController
   end
 
   def edit
+    @uploader = Story.new.attachment
+    # @uploader.success_action_redirect = new_user_url
   end
 
   def create

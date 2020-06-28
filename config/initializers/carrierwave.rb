@@ -6,7 +6,7 @@ CarrierWave.configure do |config|
       provider: 'AWS',
       aws_access_key_id: Rails.application.secrets.aws_access_key_id,
       aws_secret_access_key: Rails.application.secrets.aws_secret_access_key,
-      persistent: false,
+      # persistent: false,
       region: Rails.application.secrets.s3_region
     }
     config.fog_directory = Rails.application.secrets.s3_bucket
