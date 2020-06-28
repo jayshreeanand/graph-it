@@ -3,6 +3,8 @@ require 'resque_web'
 Rails.application.routes.draw do
   mount ResqueWeb::Engine => '/resque_web'
 
+  root 'stories#index'
+
   devise_for :users do
     root to: "devise/sessions#new"
   end
