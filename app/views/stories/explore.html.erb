@@ -24,8 +24,8 @@
                     <%- elsif story.kind == 'image' %>
                       <img class="picture" src="<%= story.resized_attachment %>" alt="">
                     <% end %>
-                    <div class="caption">
-                      <h3 class="story-title"><%= story.title %></h3>
+                    <div class="caption pt-3">
+                      <h3 class="story-title.truncate(30)"><%= story.title %></h3>
                       <p  class="story-description"><%= story.description.truncate(50) %></p>
                     </div>
                   </div>
