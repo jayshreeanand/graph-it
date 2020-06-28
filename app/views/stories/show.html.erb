@@ -1,7 +1,12 @@
 <div class="col-md-3 col-sm-6 story-box">
   <div class="story">
     <div class="thumbnail">
-      <img class="picture" src="<%= @story.picture.url %>" alt="">
+      <%= console %>
+      <%- if @story.kind == 'video' %>
+        <%= video_tag @story.attachment.url, controls: true, class: 'video' %>
+      <%- elsif @story.kind == 'image' %>
+        <img class="picture" src="<%= @story.attachment.url %>" alt="">
+      <% end %>
       <div class="caption">
         <h3 class="story-title"><%= @story.title %></h3>
         <p class="story-description"><%= @story.description %></p>

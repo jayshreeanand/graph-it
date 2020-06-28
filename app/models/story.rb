@@ -15,7 +15,7 @@ class Story < ApplicationRecord
 
   def update_kind
     if attachment.present?
-      self.kind = (attachment.content_type.include? 'video') ? 'video' : 'audio'
+      self.kind = (attachment.content_type.include? 'video') ? 'video' : 'image'
     end
   end
 end
