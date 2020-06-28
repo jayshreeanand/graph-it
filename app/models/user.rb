@@ -10,7 +10,7 @@ class User < ApplicationRecord
   validates :first_name, presence: true
   validates :last_name, presence: true
 
-  after_create :add_avatar
+  after_create :add_avatar!
 
   mount_uploader :avatar, AvatarUploader
 
