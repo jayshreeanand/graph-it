@@ -1,12 +1,11 @@
 require 'carrierwave/orm/activerecord'
 
 CarrierWave.configure do |config|
-  if Rails.env.production? || Rails.env.staging?
+  if Rails.env.production? || Rails.env.staging? || Rails.env.development?
     config.fog_credentials = {
       provider: 'AWS',
       aws_access_key_id: Rails.application.secrets.aws_access_key_id,
       aws_secret_access_key: Rails.application.secrets.aws_secret_access_key,
-      use_iam_profile: true,
       persistent: false,
       region: Rails.application.secrets.s3_region
     }
