@@ -29,6 +29,8 @@ gem 'dropzonejs-rails'
 # Image manipulation
 gem 'mini_magick'
 
+# Background Processing
+gem 'resque'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
