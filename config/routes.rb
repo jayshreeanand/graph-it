@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  mount ResqueWeb::Engine => '/resque_web'
+  
   devise_for :users do
     root to: "devise/sessions#new"
   end

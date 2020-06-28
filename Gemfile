@@ -31,6 +31,7 @@ gem 'mini_magick'
 
 # Background Processing
 gem 'resque'
+gem 'resque-web', require: 'resque_web'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
