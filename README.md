@@ -25,6 +25,7 @@ Dropzone for file drag and drop
 coordinates
 - TinyGraphs - for randomized user profile pictures
 
+Screenshots here : https://docs.google.com/document/d/1muk4VsvnzgIsao4TR09QWoLhD2yNk9EEeW0ID5ngraM/edit?usp=sharing
 
 -----
 - You can also sign up for a new account. (You should verify your email through a confirmation link
