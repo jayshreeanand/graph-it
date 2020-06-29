@@ -37,6 +37,7 @@ for account confirmation)
 - Stories can be created, updated, deleted.
 -  Redis + resque for background image and video processing .Resque dashboard can be accessed here -
 [https://graph-it-live.herokuapp.com/resque_web](https://graph-it-live.herokuapp.com/resque_web)
+- Tests - basic controller and model tests using Rspec + FactoryBot
 
 ------
 
