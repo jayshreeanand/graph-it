@@ -118,6 +118,9 @@ GEM
     execjs (2.7.0)
     factory_bot (6.0.2)
       activesupport (>= 5.0.0)
+    factory_bot_rails (6.0.0)
+      factory_bot (~> 6.0.0)
+      railties (>= 5.0.0)
     feathericon-sass (1.0.0)
       sass (>= 3.2)
     ffi (1.13.1)
@@ -359,7 +362,7 @@ DEPENDENCIES
   carrierwave_direct
   devise
   dropzonejs-rails
-  factory_bot
+  factory_bot_rails
   feathericon-sass
   fog-aws
   foreman
