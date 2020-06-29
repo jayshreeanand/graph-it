@@ -1,7 +1,8 @@
 require 'test_helper'
 
 class StoryTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+  test "should not save Story without title" do
+    story = Story.new
+    assert_not story.save
+  end
 end
