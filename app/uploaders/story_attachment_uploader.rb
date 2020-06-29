@@ -17,11 +17,11 @@ class StoryAttachmentUploader < BaseUploader
   end
 
   version :image, if: :image? do
-    process :resize_to_fit => [1200, 600]
+    process resize_to_fill: [600, 1200]
   end
 
   version :image_small, if: :image? do
-    process :resize_to_fit => [600, 300]
+    process resize_to_fill: [300, 600]
   end
 
   protected
